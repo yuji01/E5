@@ -1,4 +1,4 @@
-#查询系列api，每6小时调用一次（周六日不启动）
+#查询系列api，每2小时调用一次
 name: Run Api.Read
 
 on: 
@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '12 */6 * * 1-5'
+    - cron: '0 */6 * * *'
   watch:
     types: [started]
    
