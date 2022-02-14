@@ -216,14 +216,14 @@ for _ in range(1,config['rounds']+1):
         choosenum = random.sample(range(1, 5),2)
         if config['allstart'] == 1 or 1 in choosenum:
             print('excel文件操作')
-            excelWrite(a,filesname,'QVQ'+str(random.randint(1,600)))
+            excelWrite(a,filesname,'QVQ'+str(random.randint(1,300)))
         if config['allstart'] == 1 or 2 in choosenum:
             print('team操作')
-            teamWrite(a,'QVQ'+str(random.randint(1,600)))
+            teamWrite(a,'QVQ'+str(random.randint(1,300)))
         if config['allstart'] == 1 or 3 in choosenum:
             print('task操作')
-            taskWrite(a,'QVQ'+str(random.randint(1,600)))
+            taskWrite(a,'QVQ'+str(random.randint(1,300)))
         if config['allstart'] == 1 or 4 in choosenum:
             print('onenote操作')
-            onenoteWrite(a,'QVQ'+str(random.randint(1,600)))
+            onenoteWrite(a,'QVQ'+str(random.randint(1,300)))
         print('-')
