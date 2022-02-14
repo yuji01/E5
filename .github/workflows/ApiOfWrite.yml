@@ -1,4 +1,4 @@
-#创建系列api，每天调用一次
+#创建系列api，每天调用2次,8:00和20:00
 name: Run Api.Write
 
 on: 
@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '12 1 * * *'
+    - cron: '0 8,20 * * *'
   watch:
     types: [started]
    
