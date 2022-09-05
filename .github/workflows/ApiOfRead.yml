@@ -1,4 +1,4 @@
-#查询系列api，每2小时调用一次
+#查询系列api，每1小时调用一次
 name: Run Api.Read
 
 on: 
@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: '0 */2 * * *'
+    - cron: '0 */1 * * *'
   watch:
     types: [started]
    
