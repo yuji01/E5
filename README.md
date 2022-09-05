@@ -1,11 +1,9 @@
 # OFFICE365 E5调用api使E5开发者续订 修复版AutoApi （不使用服务器）
-## 查询：每2小时一次
-## 创建：每天8点和20点
+## 查询：每1小时0分
+## 创建：每3小时0分
 ## 更新：每天0点
 ## 说明 ##
-* E5自动续期程序，但是**不保证续期**
-* **已经成功续期**
-* 设置了**周六日(UTC时间)不启动**自动调用，周1-5每6小时自动启动一次 （修改看教程）
+* E5自动续期程序，已经成功续期*
 * 调用api保活：
      * 查询系api：onedrive,outkook,notebook,site等
      * 创建系api: 自动发送邮件，上传文件，修改excel等
@@ -15,14 +13,7 @@
 
 # AutoApi v6.0 ———— E5自动续期
 AutoApi系列：~~AutoApi(v1.0)~~、~~AutoApiSecret(v2.0)~~、~~AutoApiSR(v3.0)~~、~~AutoApiS(v4.0)~~、~~AutoApiP(v5.0)~~、AutoApi(v6.0)
-
-## 说明 ##
-* E5自动续期程序，但是**不保证续期**
-* 设置了**周六日(UTC时间)不启动**自动调用，周1-5每6小时自动启动一次 （修改看教程）
-* 调用api保活：
-     * 查询系api：onedrive,outkook,notebook,site等
-     * 创建系api: 自动发送邮件，上传文件，修改excel等
-     
+   
 ### 相关 ###
 * AutoApi: https://github.com/wangziyingwen/AutoApi
 * **错误及解决办法/续期相关知识/更新日志**：https://github.com/wangziyingwen/Autoapi-test
