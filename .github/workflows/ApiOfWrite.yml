@@ -2,6 +2,7 @@
 name: Run Api.Write
 
 on: 
+#任务遇到什么事件才执行
   #release:
   #  types: [published]
   #push:
@@ -9,6 +10,7 @@ on:
   #  - 'v*'
   #  branches: 
   #    - master
+# 定时任务
   schedule:
     - cron: '0 * * * *'
   watch:
@@ -16,8 +18,9 @@ on:
    
 jobs:
   build:
-    #runs-on: ubuntu-latest
-    runs-on: ubuntu-22.04
+  #运行环境
+    runs-on: ubuntu-latest
+    #runs-on: ubuntu-22.04
     if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Checkout
