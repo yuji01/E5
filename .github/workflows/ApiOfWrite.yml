@@ -2,11 +2,11 @@
 name: Run Api.Write
 
 on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
+  #release:
+  #  types: [published]
+  #push:
+  #  tags:
+  #  - 'v*'
   #  branches: 
   #    - master
   schedule:
