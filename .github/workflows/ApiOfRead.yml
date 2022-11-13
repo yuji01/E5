@@ -2,11 +2,11 @@
 name: Run Api.Read
 
 on: 
-  release:
-    types: [published]
-  push:
-    tags:
-    - 'v*'
+  #release:
+  #  types: [published]
+  #push:
+  #  tags:
+  #  - 'v*'
   #  branches: 
   #    - master
   schedule:
