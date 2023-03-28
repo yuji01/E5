@@ -3,13 +3,6 @@ name: Run Api.Write
 
 on: 
 #任务遇到什么事件才执行
-  #release:
-  #  types: [published]
-  #push:
-  #  tags:
-  #  - 'v*'
-  #  branches: 
-  #    - master
 # 定时任务
   schedule:
     - cron: '*/5 * * * *'
@@ -21,7 +14,7 @@ jobs:
   #运行环境
     runs-on: ubuntu-latest
     #runs-on: ubuntu-22.04
-    # if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
+    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     steps:
     - name: Checkout
       uses: actions/checkout@master
