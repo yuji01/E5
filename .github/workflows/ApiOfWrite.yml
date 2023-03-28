@@ -21,7 +21,7 @@ jobs:
   #运行环境
     runs-on: ubuntu-latest
     #runs-on: ubuntu-22.04
-    if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
+    # if: github.event.repository.owner.id == github.event.sender.id  # 自己点的 start
     steps:
     - name: Checkout
       uses: actions/checkout@master
