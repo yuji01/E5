@@ -12,7 +12,7 @@ on:
   #    - master
 # 定时任务
   schedule:
-    - cron: '19 * * * *'
+    - cron: '22 * * * *'
   watch:
     types: [started]
    
