@@ -6,6 +6,7 @@ import json,sys,time,random
 
 #reload(sys)
 #sys.setdefaultencoding('utf-8')
+
 emailaddress=os.getenv('EMAIL')
 app_num=os.getenv('APP_NUM')
 ###########################
@@ -97,8 +98,8 @@ def SendEmail(a,subject,content):
                  'saveToSentItems': 'true'}            
     apiReq('post',a,url,json.dumps(mailmessage))	
 	
-#修改excel(这函数分离好像意义不大)
-#api-获取itemid: https://graph.microsoft.com/v1.0/me/drive/root/search(q='.xlsx')?select=name,id,webUrl
+# 修改excel(这函数分离好像意义不大)
+# api-获取itemid: https://graph.microsoft.com/v1.0/me/drive/root/search(q='.xlsx')?select=name,id,webUrl
 def excelWrite(a,filesname,sheet):
     url=r'https://graph.microsoft.com/v1.0/me/drive/root:/AutoApi/App'+str(a)+r'/'+filesname+r':/workbook/worksheets/add'
     data={
@@ -180,7 +181,7 @@ for a in range(1, int(app_num)+1):
     ms_token=os.getenv('MS_TOKEN_'+str(a))
     access_token_list[a-1]=getmstoken(ms_token,a)
 print('')    
-#获取天气
+# 获取天气
 headers={'Accept-Language': 'zh-CN'}
 weather=req.get(r'https://wttr.in/'+city+r'?format=4&?m',headers=headers).text
 
@@ -189,9 +190,9 @@ for a in range(1, int(app_num)+1):
     print('账号 '+str(a))
     print('发送邮件 ( 邮箱单独运行，每次运行只发送一次，防止封号 )')
     if emailaddress != '':
-        SendEmail(a,'家乡的天气',weather)
+        SendEmail(a,'老家今日天气',weather)
         print('')
-#其他api
+# 其他api
 for _ in range(1,config['rounds']+1):
     if config['rounds_delay'][0] == 1:
         time.sleep(random.randint(config['rounds_delay'][1],config['rounds_delay'][2]))     
