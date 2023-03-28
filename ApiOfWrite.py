@@ -182,14 +182,14 @@ for a in range(1, int(app_num)+1):
 print('')    
 #获取天气
 headers={'Accept-Language': 'zh-CN'}
-weather=req.get(r'http://wttr.in/'+city+r'?format=4&?m',headers=headers).text
+weather=req.get(r'https://wttr.in/'+city+r'?format=4&?m',headers=headers).text
 
 #实际运行
 for a in range(1, int(app_num)+1):
     print('账号 '+str(a))
     print('发送邮件 ( 邮箱单独运行，每次运行只发送一次，防止封号 )')
     if emailaddress != '':
-        SendEmail(a,'weather',weather)
+        SendEmail(a,'家乡的天气',weather)
         print('')
 #其他api
 for _ in range(1,config['rounds']+1):
