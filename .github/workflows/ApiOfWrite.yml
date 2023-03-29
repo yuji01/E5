@@ -6,8 +6,8 @@ on:
 # 定时任务
   schedule:
     - cron: '*/5 * * * *'
-  watch:
-    types: [started]
+  #watch:
+   # types: [started]
    
 jobs:
   build:
