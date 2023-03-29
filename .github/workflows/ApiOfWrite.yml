@@ -1,21 +1,17 @@
-#创建系列api，每小时0分调用一次
 name: Run Api.Write
 
 on: 
-#任务遇到什么事件才执行
-# 定时任务
   schedule:
-    - cron: '22 04 * * *'
-  #watch:
-   # types: [started]
-   
+    - cron: '*/5 * * * *'
+  watch:
+    types: [started]
+ 
 jobs:
   build:
-  #运行环境
     runs-on: ubuntu-latest
     #runs-on: ubuntu-22.04
     # 自己点start或者计划任务
-    # if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
+    if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
     # if: github.event_name == 'watch' || github.event_name == 'schedule'
     steps:
     - name: Checkout
