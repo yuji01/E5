@@ -16,7 +16,7 @@ jobs:
     #runs-on: ubuntu-22.04
     # 自己点start或者计划任务
     # if: github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule'
-    if: github.event_name == 'watch' || github.event_name == 'schedule'
+    # if: github.event_name == 'watch' || github.event_name == 'schedule'
     steps:
     - name: Checkout
       uses: actions/checkout@master
