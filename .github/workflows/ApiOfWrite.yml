@@ -5,7 +5,7 @@ on:
 #任务遇到什么事件才执行
 # 定时任务
   schedule:
-    - cron: '05 04 * * *'
+    - cron: '*/5 * * * *'
   watch:
     types: [started]
    
