@@ -2,7 +2,7 @@ name: Run Api.Write
 
 on: 
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
   watch:
     types: [started]
  
